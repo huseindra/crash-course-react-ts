@@ -1,26 +1,28 @@
 
-import styled from "styled-components";
+import React, { useState } from 'react';
+import {Card, DateItem, Button, TitleItem, PriceItem} from "../assets/styles/global"
 
-const Card = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border-radius: 12px;
-    background-color: #4b4b4b;
 
-`
-const ExpenseItem:React.FC = () => {
-
+type CardProps = {
+    date?: string;
+    title?: string;
+    price?:number
+}
+const ExpenseItem: React.FC<CardProps> = (props) => {
+    const [title, setTitle] = useState(props.title)
+    const clickHandle = () => {
+        setTitle("Updated!")
+        console.log(title)
+    }
     return(
         <Card>
-        <div>August 21, 2021</div>
         <div>
-            <h1>Car Insurance</h1>
-            <div>$20.000</div>
+            <DateItem>{props.date}</DateItem>
+            <TitleItem>{title}</TitleItem>
+            <Button onClick={clickHandle}>Change Title</Button>
         </div>
+        <PriceItem>$ {props.price}</PriceItem>
+
         </Card>
     )
 }
