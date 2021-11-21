@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {Card, DateItem, Button, TitleItem, PriceItem} from "../assets/styles/global"
+import {Card, DateItem, Button, TitleItem, PriceItem} from "../../assets/styles/global"
 
 
 type CardProps = {
@@ -10,6 +10,7 @@ type CardProps = {
 }
 const ExpenseItem: React.FC<CardProps> = (props) => {
     const [title, setTitle] = useState(props.title)
+    console.log("Reacted by click!")
     const clickHandle = () => {
         setTitle("Updated!")
         console.log(title)

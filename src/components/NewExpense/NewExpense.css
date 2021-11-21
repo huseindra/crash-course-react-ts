@@ -1,0 +1,5 @@
+.new-expense__controls {
+    display: grid;
+    margin: 1rem;
+    text-align: left;
+  }

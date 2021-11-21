@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Container } from './assets/styles/global';
-import ExpenseItem from './components/ExpenseItem';
-import {BottomNav} from './components/UI/BottomNavigation/BottomNavigation';
+import ExpenseItem from './components/Expense/ExpenseItem';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
 
@@ -32,13 +32,17 @@ const App = () => {
       <header className="App-header">
         <h1>Progressive Web Apps</h1>
       </header>
+      <section>
+        <div >
+          <NewExpense/>
+        </div>
+      </section>
         {
           data.map((item) =>(
             <ExpenseItem key={item.id} date={item.date} title={item.title} price={item.price}/>
           )
           )
         }
-        <BottomNav/>
     </div>
     </Container>
   );

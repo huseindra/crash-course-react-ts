@@ -1,16 +1,16 @@
 
 import React, { useState } from 'react';
-import { BottomNav } from './BottomNavigation';
+import { Nav, NavUl } from './BottomNavigation';
 
 const BottomNavigation:React.FC = () => {
 
     return (
-        <BottomNav>
-            <ul>
-                <li>test</li>
-                <li>test 2</li>
-            </ul>
-        </BottomNav>
+        <Nav>
+            <NavUl>
+                <a>test</a>
+                <a>test 2</a>
+            </NavUl>
+        </Nav>
     )
 }
 

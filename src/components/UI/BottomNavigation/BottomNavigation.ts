@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
-export const BottomNav = styled.div `
-    position:fixed;
-    bottom:0;
-    background-color: #ddd;
-    display:grid;
+export const Nav = styled.nav `
+    margin:auto;
+    text-align: center;
+    width: 100%;
+    font-family: arial;
+
+`
+export const NavUl = styled.div `
+    margin:auto;
+    text-align: center;
+    width: 100%;
+    font-family: arial;
 `
