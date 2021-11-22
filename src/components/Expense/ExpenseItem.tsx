@@ -1,28 +1,29 @@
 
 import React, { useState } from 'react';
-import {Card, DateItem, Button, TitleItem, PriceItem} from "../../assets/styles/global"
-
+import {Card, Button, TitleItem, PriceItem} from "../../assets/styles/global"
+import ExpenseDate from "./ExpenseDate"
 
 type CardProps = {
-    date?: string;
+    date?: any;
     title?: string;
-    price?:number
+    amount?:number
 }
 const ExpenseItem: React.FC<CardProps> = (props) => {
     const [title, setTitle] = useState(props.title)
-    console.log("Reacted by click!")
+    
     const clickHandle = () => {
         setTitle("Updated!")
         console.log(title)
     }
+
     return(
         <Card>
         <div>
-            <DateItem>{props.date}</DateItem>
+            <ExpenseDate date={props.date}/>
             <TitleItem>{title}</TitleItem>
             <Button onClick={clickHandle}>Change Title</Button>
         </div>
-        <PriceItem>$ {props.price}</PriceItem>
+        <PriceItem>$ {props.amount}</PriceItem>
 
         </Card>
     )

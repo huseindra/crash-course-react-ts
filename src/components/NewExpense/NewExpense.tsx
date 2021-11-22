@@ -1,50 +1,24 @@
-import React, {useState} from 'react';
-import { InputCard, Input, Label, Button } from '../../assets/styles/global';
+import React from 'react';
+import FormExpense from './FormExpense';
 
 import "./NewExpense.css"
 
-const NewExpense:React.FC = () => {
+type onAddExpense = {
+    onAddExpense?:any;
+}
+
+const NewExpense:React.FC<onAddExpense > = (props) => {
     
-    // use single state 
-    // const [title, setTitle] = useState("")
-
-    // use multiple state once 
-    const [expenseInput, setExpenseInput] = useState({
-        title: "",
-        amount: "",
-        date:""
-    })
-
-
-    const OnChangeTitle = (event:any) =>{
-        setExpenseInput({
-            ...expenseInput,
-            title: event.target.value
-        })
+    const SaveExpenseData = (enteredExpenseData:any) => {
+        const expenseData = {
+            ...enteredExpenseData,
+            id: Math.random().toString()
+        }
+       props.onAddExpense(expenseData)
     }
-    
+
     return(
-    <InputCard>
-        <form action="expense__controls" method="post">
-            <div className="new-expense__controls">
-                <Label htmlFor="Title">Title</Label>
-                <Input type="text" onChange={OnChangeTitle} placeholder="Input something..." />
-            </div>
-            <div className="new-expense__controls">
-                <Label htmlFor="Amount">Amount</Label>
-                <Input type="number" placeholder="Number" min="0" max="999999" />
-            </div>
-            <div className="new-expense__controls">
-                <Label htmlFor="Date">Date</Label>
-                <Input type="date" min="2019-01-01" max="2025-12-31"/>
-            </div>
-            <div className="new-expense__controls">
-                <Button type="submit" >Add Expense</Button>
-            </div>
-            
-        </form>
-    </InputCard>
-    
+        <FormExpense onSaveExpenseData={SaveExpenseData}/>
     )
 }
 
