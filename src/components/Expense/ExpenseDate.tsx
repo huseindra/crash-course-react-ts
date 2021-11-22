@@ -16,7 +16,7 @@ const ExpenseItem: React.FC<onDateData> = (props) => {
     
     return(
         <div>
-            <DateItem>{month}, {day} {year}</DateItem>
+            <DateItem >{month}, {day} {year}</DateItem>
         </div>
     )
 }

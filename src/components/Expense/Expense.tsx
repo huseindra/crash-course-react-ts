@@ -4,6 +4,7 @@ import FilterExpense from './FilterExpense';
 
 type onDataExpense = {
     onDataExpense?:any
+    items?:any
 }
 
 const Expense:React.FC<onDataExpense> = (props) => {
@@ -12,6 +13,14 @@ const Expense:React.FC<onDataExpense> = (props) => {
     const onChangeFilter = (event:any) => {
         setFilteredYear(event.target.value)
     }
+
+     // const filteredExpense = props.item.filter((expense:any) => {
+    //     return expense.date.getFullYear().toString() === filteredYear
+    // })
+
+    //   const filteredExpenses = props.item.filter((expenses:any) => {
+    //     return expenses.date.getFullYear().toString() === filteredYear;
+    //   });
     
     return(
         <div>
@@ -22,7 +31,7 @@ const Expense:React.FC<onDataExpense> = (props) => {
                 {
                     props.onDataExpense.map((item:any) =>(
 
-                        <ExpenseItem key={item.id} date={item.date} title={item.title} amount={item.amount}/>
+                        <ExpenseItem key={item.id}  date={item.date} title={item.title} amount={item.amount}/>
                     )
                     )
                 }
