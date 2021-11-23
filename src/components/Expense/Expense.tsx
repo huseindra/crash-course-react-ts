@@ -1,39 +1,45 @@
 import React, {useState} from 'react';
 import ExpenseItem from './ExpenseItem';
 import FilterExpense from './FilterExpense';
-
+import Skeleton from '../UI/Skeleton/Skeleton'
+import { NoDataFound } from '../../assets/styles/global';
 type onDataExpense = {
-    onDataExpense?:any
     items?:any
+    isLoading?:any
 }
 
 const Expense:React.FC<onDataExpense> = (props) => {
-    const [filteredYear, setFilteredYear] = useState("2020")
+    const [filteredYear, setFilteredYear] = useState("2021")
 
-    const onChangeFilter = (event:any) => {
-        setFilteredYear(event.target.value)
+    const onChangeFilter = (selectedYear:any) => {
+        setFilteredYear(selectedYear)
     }
 
      // const filteredExpense = props.item.filter((expense:any) => {
     //     return expense.date.getFullYear().toString() === filteredYear
     // })
 
-    //   const filteredExpenses = props.item.filter((expenses:any) => {
-    //     return expenses.date.getFullYear().toString() === filteredYear;
-    //   });
+      const filteredExpenses = props.items.filter((expense:any) => {
+        const filter =  expense.date.getFullYear().toString() === filteredYear;
+        console.log(filter)
+        return filter
+      });
     
     return(
         <div>
             <div>
-                <FilterExpense selected={filteredYear} onChangeFilter={onChangeFilter}/>
+                <FilterExpense yearSelected={filteredYear} onChangeFilter={onChangeFilter}/>
             </div>
             <div>
                 {
-                    props.onDataExpense.map((item:any) =>(
+                    props.isLoading ? new Array(5).fill(1).map((_,i) => {
+                        return <Skeleton key={i} />;
+                    }) :
+                    filteredExpenses.length ? filteredExpenses.map((item:any) =>(
 
                         <ExpenseItem key={item.id}  date={item.date} title={item.title} amount={item.amount}/>
                     )
-                    )
+                    ) : <NoDataFound> Data Not Found</NoDataFound>
                 }
             </div>
         </div>

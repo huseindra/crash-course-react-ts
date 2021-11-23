@@ -91,3 +91,9 @@ export const Label = styled.label `
     font-size: 14px;
     font-weight: 700;
 `
+
+export const NoDataFound = styled.label `
+    text-align: center;
+    margin: 10rem 0rem;
+    display:block;
+`

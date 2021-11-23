@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Container } from './assets/styles/global';
 import Expense from './components/Expense/Expense';
@@ -28,7 +28,13 @@ const dummyData = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(dummyData)
+  const [isLoading, setIsLoading] = useState(true);
 
+
+  useEffect(() => {
+    setIsLoading(false)
+    
+  },[])
   const addExpense = (expense:any) => {
     setExpenses((prevExpenses) => {
       return [ expense, ...prevExpenses]
@@ -50,7 +56,7 @@ const App = () => {
 
       {/* section for contents */}
       <section>
-        <Expense onDataExpense={expenses} />
+        <Expense isLoading={isLoading} items={expenses} />
       </section>
     </div>
     </Container>
