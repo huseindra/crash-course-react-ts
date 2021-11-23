@@ -3,3 +3,9 @@
     margin: 1rem;
     text-align: left;
   }
+
+.button__controls {
+    display: flex;
+    margin: 1rem;
+    text-align: left;
+}

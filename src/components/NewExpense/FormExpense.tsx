@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { InputCard, Input, Label, Button } from '../../assets/styles/global';
+import { InputCard, Input, Label, Button, ButtonSecondary } from '../../assets/styles/global';
 
 import "./NewExpense.css"
 
 type onSaveExpenseData = {
     onSaveExpenseData?:any
+    onCancel?:any
 }
 const FormExpense:React.FC<onSaveExpenseData> = (props) => {
     
@@ -72,10 +73,10 @@ const FormExpense:React.FC<onSaveExpenseData> = (props) => {
                 <Label htmlFor="Date">Date</Label>
                 <Input type="date" value={date} onChange={OnChangeDate} min="2019-01-01" max="2025-12-31"/>
             </div>
-            <div className="new-expense__controls">
+            <div className="button__controls">
+                <ButtonSecondary type="button" onClick={props.onCancel}>Cancel</ButtonSecondary>
                 <Button type="submit" >Add Expense</Button>
             </div>
-            
         </form>
     </InputCard>
     

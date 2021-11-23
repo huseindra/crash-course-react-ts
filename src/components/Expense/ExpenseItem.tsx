@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {Card, Button, TitleItem, PriceItem} from "../../assets/styles/global"
+import {Card, ButtonThird, TitleItem, PriceItem} from "../../assets/styles/global"
 import ExpenseDate from "./ExpenseDate"
 
 type CardProps = {
@@ -20,8 +20,8 @@ const ExpenseItem: React.FC<CardProps> = (props) => {
         <Card>
         <div>
             <ExpenseDate date={props.date}/>
-            <TitleItem>{title}</TitleItem>
-            <Button onClick={clickHandle}>Change Title</Button>
+            <TitleItem>{props.title}</TitleItem>
+            <ButtonThird onClick={clickHandle}>Change Title</ButtonThird>
         </div>
         <PriceItem>$ {props.amount}</PriceItem>
 

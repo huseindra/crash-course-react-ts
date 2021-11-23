@@ -68,7 +68,38 @@ export const Button = styled.button `
     border:none;
     color:#fff;
     padding:10px;
-    margin-top:5px;
+    margin:5px;
+    width:300px;
+    cursor:pointer;
+    border-radius:5px;
+`
+export const AddButton = styled.button `
+    background: rgb(255, 100, 0);
+    border:none;
+    color:#fff;
+    padding:10px;
+    margin:5px;
+    width:100%;
+    cursor:pointer;
+    border-radius:5px;
+`
+
+export const ButtonSecondary = styled.button `
+    background: #ddd;
+    color: #000;    
+    border:none;
+    padding:10px;
+    margin:5px;
+    width:250px;
+    cursor:pointer;
+    border-radius:5px;
+`
+
+export const ButtonThird = styled.button `
+    background: #ddd;
+    color: #000;    
+    border:none;
+    padding:5px;
     cursor:pointer;
     border-radius:5px;
 `
@@ -92,7 +123,7 @@ export const Label = styled.label `
     font-weight: 700;
 `
 
-export const NoDataFound = styled.label `
+export const NoDataFound = styled.h4 `
     text-align: center;
     margin: 10rem 0rem;
     display:block;
