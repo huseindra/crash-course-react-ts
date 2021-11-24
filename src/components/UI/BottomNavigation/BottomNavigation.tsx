@@ -1,16 +1,26 @@
 
 import React, { useState } from 'react';
-import { Nav, NavUl } from './BottomNavigation';
+import { Navigation, NavigationUl,NavigationLi ,NavigationText } from './BottomNavigationStyled';
 
 const BottomNavigation:React.FC = () => {
 
     return (
-        <Nav>
-            <NavUl>
-                <a>test</a>
-                <a>test 2</a>
-            </NavUl>
-        </Nav>
+        <Navigation>
+            <NavigationUl>
+                <NavigationLi>
+                    <NavigationText href="#a">Home</NavigationText>
+                </NavigationLi>
+                <NavigationLi>
+                    <NavigationText href="#a">Explore</NavigationText>
+                </NavigationLi>
+                <NavigationLi>
+                    <NavigationText href="#a">History</NavigationText>
+                </NavigationLi>
+                <NavigationLi>
+                    <NavigationText href="#a">Profile</NavigationText>
+                </NavigationLi>
+            </NavigationUl>
+        </Navigation>
     )
 }
 

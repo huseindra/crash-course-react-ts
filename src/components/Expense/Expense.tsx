@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import FilterExpense from './FilterExpense';
 import Skeleton from '../UI/Skeleton/Skeleton'
 import ExpenseList from './ExpenseList';
+import ExpenseChart from './ExpenseChart';
 type onDataExpense = {
     items?:any
     isLoading?:any
@@ -30,6 +31,7 @@ const Expense:React.FC<onDataExpense> = (props) => {
                 <FilterExpense yearSelected={filteredYear} onChangeFilter={onChangeFilter}/>
             </div>
             <div>
+                <ExpenseChart expenses={filteredExpenses}/>
                 {
                     props.isLoading ? new Array(5).fill(1).map((_,i) => {
                         return <Skeleton key={i} />;

@@ -15,16 +15,19 @@ import styled from "styled-components";
 `
 
 export const Card = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 12px;
-    background-color: #fff;
+    &{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 12px;
+        background-color: #fff;
+    }
       
 `
+
 
 export const Container = styled.div `
     display:grid;
@@ -85,7 +88,7 @@ export const AddButton = styled.button `
 `
 
 export const ButtonSecondary = styled.button `
-    background: #ddd;
+    background: #fff;
     color: #000;    
     border:none;
     padding:10px;
@@ -112,7 +115,7 @@ export const Input = styled.input `
 `
 export const InputCard = styled.div `
     display:grid;
-    background:linear-gradient(180deg,#daccbf,#a6a5a4);
+    background:linear-gradient(180deg,#f3f0ee,#ddd);
     border-radius:10px;
 `
 

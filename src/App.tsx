@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from './assets/styles/global';
 import Expense from './components/Expense/Expense';
 import NewExpense from './components/NewExpense/NewExpense';
+import BottomNavigation from './components/UI/BottomNavigation/BottomNavigation';
 
 
 const dummyData = [
@@ -14,7 +15,7 @@ const dummyData = [
   },
   {
     id:2,
-    date:new Date(2021, 2, 12),
+    date:new Date(2021, 3, 14),
     title: "Bike Insurance",
     amount: 100000      
   },
@@ -22,6 +23,19 @@ const dummyData = [
     id:3,
     date:new Date(2020, 7, 14),
     title: "Motorcyle Insurance",
+    amount: 120000      
+  },
+  {
+    id:4,
+    date:new Date(2020, 4, 4),
+    title: "Seblak Jaletot",
+    amount: 120000      
+  }
+  ,
+  {
+    id:5,
+    date:new Date(2020, 2, 24),
+    title: "Bus Insurance",
     amount: 120000      
   }
 ]
@@ -45,7 +59,7 @@ const App = () => {
     <Container>
     <div className="App">
       <header className="App-header">
-        <h1>Progressive Web Apps</h1>
+        <h1>Money Tracker</h1>
       </header>
       {/* section for input  */}
       <section>
@@ -58,6 +72,7 @@ const App = () => {
       <section>
         <Expense isLoading={isLoading} items={expenses} />
       </section>
+      <BottomNavigation />
     </div>
     </Container>
   );
