@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Container } from './assets/styles/global';
+import { Container, Main } from './assets/styles/global';
 import Expense from './components/Expense/Expense';
 import NewExpense from './components/NewExpense/NewExpense';
 import BottomNavigation from './components/UI/BottomNavigation/BottomNavigation';
@@ -57,7 +57,7 @@ const App = () => {
 
   return (
     <Container>
-    <div className="App">
+    <Main>
       <header className="App-header">
         <h1>Money Tracker</h1>
       </header>
@@ -73,7 +73,7 @@ const App = () => {
         <Expense isLoading={isLoading} items={expenses} />
       </section>
       <BottomNavigation />
-    </div>
+    </Main>
     </Container>
   );
 }

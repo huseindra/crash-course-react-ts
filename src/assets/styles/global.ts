@@ -10,7 +10,7 @@ import styled from "styled-components";
         font-family: 'Open Sans', sans-serif; 
     }
     #root{
-        margin:0 auto;
+        margin:0;
     }
 `
 
@@ -30,11 +30,17 @@ export const Card = styled.div`
 
 
 export const Container = styled.div `
-    display:grid;
+    display:flex;
+    justify-content:center;
     margin: 0 30%;
     @media(max-width:768px){
         margin: 0 10%;
      }
+`
+
+export const Main = styled.div 
+`
+     width:500px;
 `
 
 export const DateItem = styled.div `

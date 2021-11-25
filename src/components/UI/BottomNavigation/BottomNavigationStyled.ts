@@ -4,16 +4,18 @@ export const Navigation = styled.nav `
     background: rgb(255, 100, 0);
     border:none;
     color:#fff;
-    height:40px;
+    height:50px;
     position: -webkit-sticky;
-	position: sticky;
+	position: fixed;
+    
 	bottom: 0;
 
 `
 export const NavigationUl = styled.ul `
     margin:auto;
     list-style:none;
-    display:flex
+    display:flex;
+    padding:0px;
     `
 export const NavigationLi = styled.li`
 padding: 1vw 2.5vw;
