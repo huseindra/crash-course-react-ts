@@ -63,9 +63,7 @@ const App = () => {
       </header>
       {/* section for input  */}
       <section>
-        <div >
           <NewExpense onAddExpense={addExpense}/>
-        </div>
       </section>
 
       {/* section for contents */}

@@ -60,7 +60,7 @@ const FormExpense:React.FC<onSaveExpenseData> = (props) => {
     
     return(
     <InputCard>
-        <form onSubmit={submitHandler}>
+        <form className="form-group-flex" onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <Label htmlFor="Title">Title</Label>
                 <Input type="text" value={title} onChange={OnChangeTitle} placeholder="Input something..." />

@@ -1,11 +1,19 @@
 .new-expense__controls {
-    display: grid;
-    margin: 1rem;
-    text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 0rem;
+  text-align: left;
+  flex-direction: column;
   }
 
 .button__controls {
     display: flex;
     margin: 1rem;
     text-align: left;
+}
+
+.form-group-flex{
+    display: flex;
+    flex-direction: column;
+    max-width: 425px;
 }

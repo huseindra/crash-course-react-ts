@@ -32,7 +32,6 @@ export const Card = styled.div`
 export const Container = styled.div `
     display:flex;
     justify-content:center;
-    margin: 0 30%;
     @media(max-width:768px){
         margin: 0 10%;
      }
@@ -40,7 +39,7 @@ export const Container = styled.div `
 
 export const Main = styled.div 
 `
-     width:500px;
+     width:425px;
 `
 
 export const DateItem = styled.div `
@@ -76,20 +75,10 @@ export const Button = styled.button `
     background: rgb(255, 100, 0);
     border:none;
     color:#fff;
-    padding:10px;
-    margin:5px;
-    width:300px;
+    height:35px;
+    width:250px;
     cursor:pointer;
-    border-radius:5px;
-`
-export const AddButton = styled.button `
-    background: rgb(255, 100, 0);
-    border:none;
-    color:#fff;
-    padding:10px;
-    margin:5px;
-    width:100%;
-    cursor:pointer;
+    margin-left:5px;
     border-radius:5px;
 `
 
@@ -97,12 +86,23 @@ export const ButtonSecondary = styled.button `
     background: #fff;
     color: #000;    
     border:none;
-    padding:10px;
-    margin:5px;
+    height:35px;
     width:250px;
+    margin-right:5px;
     cursor:pointer;
     border-radius:5px;
 `
+
+export const AddButton = styled.button `
+    background: rgb(255, 100, 0);
+    border:none;
+    color:#fff;
+    height:35px;
+    width:100%;
+    cursor:pointer;
+    border-radius:5px;
+`
+
 
 export const ButtonThird = styled.button `
     background: #ddd;
@@ -120,9 +120,10 @@ export const Input = styled.input `
     border:none;
 `
 export const InputCard = styled.div `
-    display:grid;
+    display:flex;
     background:linear-gradient(180deg,#f3f0ee,#ddd);
     border-radius:10px;
+    justify-content:space-around;
 `
 
 export const Label = styled.label `

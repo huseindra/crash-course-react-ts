@@ -28,12 +28,12 @@ const NewExpense:React.FC<onAddExpense > = (props) => {
         setIsShow(false)
     }
     return(
-        <div>
+        <>
             {!isShow && 
                 <AddButton onClick={onShowExpense}>Add New Expense</AddButton>
             }
             {isShow && <FormExpense onSaveExpenseData={SaveExpenseData} onCancel={onCancelShowExpense}/>}
-        </div>
+        </>
     )
 }
 
