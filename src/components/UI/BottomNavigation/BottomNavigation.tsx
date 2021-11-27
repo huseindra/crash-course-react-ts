@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Navigation, NavigationUl,NavigationLi ,NavigationText } from './BottomNavigationStyled';
 
 const BottomNavigation:React.FC = () => {
