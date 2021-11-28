@@ -67,7 +67,7 @@ const HomePage:React.FC = () => {
       </section>
 
       {/* section for contents */}
-      <section style={{minHeight:'500px'}}>
+      <section style={{minHeight:'100%'}}>
         <Expense isLoading={isLoading} items={expenses} />
       </section>
     </Main>
