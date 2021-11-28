@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from 'react-router-dom';
 
 export const Navigation = styled.nav `
     background: rgb(255, 100, 0);
@@ -7,7 +8,7 @@ export const Navigation = styled.nav `
     height:50px;
     position: -webkit-sticky;
 	position: fixed;
-    max-width:425px;
+    width:425px;
 	bottom: 0;
 
 `
@@ -18,11 +19,11 @@ export const NavigationUl = styled.ul `
     padding:0px;
     `
 export const NavigationLi = styled.li`
-    padding: 1.2vw 1.9vw;
+    padding: 18px 22px;
     font-weight: 700;
 `
 
-export const NavigationText = styled.a `
+export const NavigationText = styled(Link) `
     color:#fff;
     text-decoration:none;
 `

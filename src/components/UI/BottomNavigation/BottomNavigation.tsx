@@ -8,16 +8,16 @@ const BottomNavigation:React.FC = () => {
         <Navigation>
             <NavigationUl>
                 <NavigationLi>
-                    <NavigationText href="#a">Home</NavigationText>
+                        <NavigationText to="/">Home</NavigationText>
                 </NavigationLi>
                 <NavigationLi>
-                    <NavigationText href="#a">Explore</NavigationText>
+                        <NavigationText to="/">Transaction</NavigationText>
                 </NavigationLi>
                 <NavigationLi>
-                    <NavigationText href="#a">History</NavigationText>
+                        <NavigationText to="/">Budget</NavigationText>
                 </NavigationLi>
                 <NavigationLi>
-                    <NavigationText href="#a">Profile</NavigationText>
+                        <NavigationText to="/about">Profile</NavigationText>
                 </NavigationLi>
             </NavigationUl>
         </Navigation>
